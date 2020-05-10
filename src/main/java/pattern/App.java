@@ -3,8 +3,11 @@
  */
 package pattern;
 
+import pattern.command.experiment.Student;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello world.");
+        Student s1 = new Student();
+        s1.experiment();
     }
 }
