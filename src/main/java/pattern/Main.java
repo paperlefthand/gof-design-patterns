@@ -3,11 +3,16 @@
  */
 package pattern;
 
-import pattern.command.experiment.Student;
+import pattern.builder.experiment.Student;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
         Student s1 = new Student();
         s1.experiment();
     }
 }
+
+//public static void command() {
+//    Student s1 = new Student();
+//    s1.experiment();
+//}
