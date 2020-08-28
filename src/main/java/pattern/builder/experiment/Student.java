@@ -1,5 +1,8 @@
 package pattern.builder.experiment;
 
+// Objectの動的生成
+// Builder=>構成物,Director=>作り方
+
 public class Student {
     public void experiment() {
         Builder builder = new SaltWaterBuilder();

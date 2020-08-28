@@ -3,16 +3,13 @@
  */
 package pattern;
 
-import pattern.builder.experiment.Student;
+import pattern.observer.school.ObserverSchoolMain;
 
 public class Main {
     public static void main(String[] args) {
-        Student s1 = new Student();
-        s1.experiment();
+//        Student s1 = new Student();
+//        s1.experiment();
+        ObserverSchoolMain main = new ObserverSchoolMain();
+        main.execute();
     }
 }
-
-//public static void command() {
-//    Student s1 = new Student();
-//    s1.experiment();
-//}
