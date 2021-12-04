@@ -1,15 +1,16 @@
 plugins {
     // Apply the java plugin to add support for Java
     java
-
     // Apply the application plugin to add support for building a CLI application.
     application
+    id("org.openjfx.javafxplugin") version "0.0.10"
+    id("io.freefair.lombok") version "6.3.0"
 }
 
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -25,6 +26,15 @@ application {
     mainClass.set("pattern.Main")
 }
 
+javafx {
+    this.version = "17"
+    this.modules = listOf("javafx.controls", "javafx.fxml")
+}
+
 // ./gradlew run で標準入力を受け付ける
-val run: JavaExec by tasks
-run.standardInput = System.`in`
+//val run: JavaExec by tasks
+//run.standardInput = System.`in`
+
+tasks.withType<JavaCompile>().configureEach {
+    options.encoding = "UTF-8"
+}
