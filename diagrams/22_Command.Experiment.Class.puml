@@ -1,0 +1,39 @@
+@startuml Command.Experiment.Class
+
+abstract class Command{
+    Beaker beaker
+    void setBeaker()
+    {abstract} void execute()
+}
+
+class Student {
+    {static} void main()
+}
+
+class MakeSaturatedSaltWaterCommand {
+    LinkedList<Command> commands
+    + void execute()
+    + void addCommand(Command)
+}
+
+
+
+class Beaker {
+    double water
+    double salt
+    boolean melted
+    void addSalt(double)
+    void addWater(double)
+    void mix()
+    void note()
+    boolean isMelted()
+}
+
+Student -> MakeSaturatedSaltWaterCommand:creates
+
+Command o-- Beaker
+AddSaltCommand -|> Command
+AddWaterCommand -|> Command
+MakeSaturatedSaltWaterCommand -|> Command
+
+@enduml

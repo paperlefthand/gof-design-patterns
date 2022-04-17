@@ -1,0 +1,26 @@
+@startuml FactoryMethod.CutPrint.Class
+
+interface Cuttable {
+}
+
+abstract class CutPrint {
+    draw()
+    cut()
+    print()
+    createCuttable()
+    createCutPrint()
+}
+
+Wood ..|> Cuttable
+Potato ..|> Cuttable
+
+AliceCutPrint --|> CutPrint
+BobCutPrint --|> CutPrint
+
+CutPrint --> Cuttable : create
+AliceCutPrint --> Potato : create
+BobCutPrint --> Wood : create
+
+
+
+@enduml
