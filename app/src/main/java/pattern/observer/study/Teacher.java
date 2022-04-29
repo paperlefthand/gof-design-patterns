@@ -1,4 +1,4 @@
-package pattern.observer.school;
+package pattern.observer.study;
 
 import pattern.observer.Generator;
 import pattern.observer.Observer;

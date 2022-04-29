@@ -9,15 +9,20 @@
 ## Exec
 
 ``` bash
+./gradlew test
 ./graldew run
 ```
 
 ## Design Patterns(GoF)
 
-02. FactoryMethod
+04. FactoryMethod
 10. Strategy
+17. Observer
 22. Command
 
 ## Reference
 
-- https://docs.gradle.org/current/samples/sample_building_java_applications.html
+- build: https://docs.gradle.org/current/samples/sample_building_java_applications.html
+- test: https://github.com/junit-team/junit5-samples/tree/r5.8.2/junit5-jupiter-starter-gradle
+
+## TODO

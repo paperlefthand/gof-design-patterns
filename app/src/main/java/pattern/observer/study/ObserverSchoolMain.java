@@ -1,4 +1,4 @@
-package pattern.observer.school;
+package pattern.observer.study;
 
 public class ObserverSchoolMain {
     public static void execute() {

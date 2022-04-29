@@ -8,15 +8,19 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1' 
 
+    // guava
     implementation 'com.google.guava:guava:30.1.1-jre' 
 
+    // lombok
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
-    
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    // junit5
+	testImplementation(platform('org.junit:junit-bom:5.8.2'))
+	testImplementation('org.junit.jupiter:junit-jupiter')
 }
 
 application {
@@ -28,8 +32,11 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 
-tasks.named('test') {
-    useJUnitPlatform() 
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
 }
 
 tasks.withType(JavaCompile) {
