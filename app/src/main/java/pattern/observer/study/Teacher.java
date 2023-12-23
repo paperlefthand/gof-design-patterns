@@ -1,20 +1,20 @@
 package pattern.observer.study;
 
+
 import pattern.observer.Generator;
 import pattern.observer.Observer;
 
 public class Teacher implements Observer {
-    private String name;
     private Subject subject;
 
-    public Teacher(String n, Subject s) {
-        name = n;
-        subject = s;
+    public Teacher(String name, Subject subject) {
+        this.subject = subject;
     }
-    
-    public void update(Generator student) {
-        Student s = (Student)student;
-        System.out.println(s.getName()+" "+subject+" "+s.getScore(subject));
+
+    @Override
+    public void update(Generator generator) {
+        Student student = (Student) generator;
+        System.out.println(student.getName() + " " + subject + " " + student.getScore(subject));
     }
 
 }

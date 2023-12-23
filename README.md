@@ -2,8 +2,8 @@
 
 ## Environment
 
-- OpenJDK 16
-- Gradle 7.3.1
+- JDK21
+- Gradle 8.5
 - Visual Studio Code
 
 ## Exec
