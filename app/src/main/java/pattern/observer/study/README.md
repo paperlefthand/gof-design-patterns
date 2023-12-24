@@ -1,6 +1,32 @@
-# 各科目の成績を発表する
+# テストの点数を異なる形式で発表する
 
-- 教師は3人.それぞれ数学,英語,物理を担当している
-- 生徒は4人.4人とも3科目を受講している
-- 生徒は各科目のテストを受け,それぞれの科目の担当教師に点数を報告する
-- 教師は,生徒の点数の報告を受けたら都度内容を発表する
+- 生徒は4人.全員数学,英語,物理の3科目を受講している
+- 各生徒は3科目のテストを実施し,教師に報告する.
+- 教師1は生徒から点数の報告を受けたらA~E判定で評価する
+- 教師2は生徒から点数の報告を受けたら`*`の数で表現する
+
+```mermaid
+classDiagram
+
+class Observer {
+  <<interface>>
+  +update(Subject) void
+}
+
+     class Generator {
+        Teacher[] teacherList
+        void addTeacher(Teacher)
+        void notifyTeachers()
+    }
+
+    class Student
+    class GraphTeacher
+    class ScoreTeacher
+
+    Generator <|-- Student
+    Observer <|-- GraphTeacher
+    Observer <|-- ScoreTeacher
+
+    Generator --o Observer
+
+```

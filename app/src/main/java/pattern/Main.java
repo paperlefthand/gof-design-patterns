@@ -2,8 +2,6 @@ package pattern;
 
 import java.util.Scanner;
 
-import pattern.observer.study.ObserverSchoolMain;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class Main {
             if (choice >= 1 && choice <= 3) {
                 switch (choice) {
                     case 1:
-                        ObserverSchoolMain.main();
+                        pattern.observer.study.Main.main();
                         break;
                     case 2:
                         break;

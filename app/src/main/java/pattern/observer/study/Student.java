@@ -4,15 +4,18 @@ import java.util.Random;
 
 import lombok.Getter;
 
-public class Student extends pattern.observer.Generator {
+public class Student extends pattern.observer.study.Generator {
 
     public Student(String name) {
         this.name = name;
     }
 
     private Random random = new Random();
+    @Getter
     private int mathScore;
+    @Getter
     private int englishScore;
+    @Getter
     private int phisicsScore;
     @Getter
     private String name;

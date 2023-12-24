@@ -1,7 +1,8 @@
-package pattern.observer.study;
+package pattern.observer;
 
-import pattern.observer.Generator;
-import pattern.observer.Observer;
+import pattern.observer.study.Generator;
+import pattern.observer.study.Observer;
+import pattern.observer.study.Student;
 
 public class DigitObserver implements Observer {
     public void update(Generator generator) {

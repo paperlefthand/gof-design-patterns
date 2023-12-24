@@ -18,7 +18,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 
     // junit5
-	testImplementation(platform('org.junit:junit-bom:5.8.2'))
+	testImplementation(platform('org.junit:junit-bom:5.10.1'))
 	testImplementation('org.junit.jupiter:junit-jupiter')
 }
 
@@ -34,7 +34,8 @@ run {
 test {
 	useJUnitPlatform()
 	testLogging {
-		events "passed", "skipped", "failed"
+		events "started", "passed", "skipped", "failed"
+        // exceptionFormat 'full'
 	}
 }
 
