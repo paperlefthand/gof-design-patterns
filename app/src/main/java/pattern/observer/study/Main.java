@@ -14,8 +14,7 @@ public class Main {
         List<Generator> students = new ArrayList<Generator>(Arrays.asList(
                 new Student("StudentA"),
                 new Student("StudentB"),
-                new Student("StudentC"),
-                new Student("StudentD")));
+                new Student("StudentC")));
 
         for (Generator student : students) {
             student.addObservers(teachers);

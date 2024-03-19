@@ -1,5 +1,6 @@
 plugins {
     id 'application' 
+    id 'jvm-test-suite'
 }
 
 repositories {
@@ -23,7 +24,7 @@ dependencies {
 }
 
 application {
-    mainClassName = 'pattern.Main' 
+    mainClass.set('pattern.Main')
 }
 
 run {
@@ -34,7 +35,7 @@ run {
 test {
 	useJUnitPlatform()
 	testLogging {
-		events "started", "passed", "skipped", "failed"
+		events "passed", "skipped", "failed"
         // exceptionFormat 'full'
 	}
 }
