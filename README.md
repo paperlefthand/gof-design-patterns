@@ -22,8 +22,8 @@
 
 ## Reference
 
-- build: https://docs.gradle.org/current/samples/sample_building_java_applications.html
-- test: https://github.com/junit-team/junit5-samples/tree/r5.8.2/junit5-jupiter-starter-gradle
+- build: <https://docs.gradle.org/current/samples/sample_building_java_applications.html>
+- test: <https://github.com/junit-team/junit5-samples/tree/r5.8.2/junit5-jupiter-starter-gradle>
 
 ## javadoc
 

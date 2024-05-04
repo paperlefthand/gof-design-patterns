@@ -1,0 +1,36 @@
+@startuml Class
+
+Student --|> Generator
+Generator o--> Observer : notifies >
+Teacher ..|> Observer
+' MathTeacher --|> Teacher
+' EnglishTeacher --|> Teacher
+' PhisicsTeacher --|> Teacher
+
+class Student {
+    String name
+    int getScore(Subject)
+    void work()
+}
+
+abstract class Generator {
+    Observer[] observers
+    void addObserver(Observer)
+    void notifyObservers()
+}
+
+interface Observer {
+    void update(Generator)
+}
+
+abstract class Teacher {
+    Subject subject
+}
+
+enum Subject {
+    MATH
+    ENGLISH
+    PHISICS
+}
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml class
+
+Human o--> Comparator
+
+interface Comparator {
+    int compare(Human, Human)
+}
+
+class AgeComparator implements Comparator
+class HeightComparator implements Comparator
+class WeightComparator implements Comparator
+
+class Human {
+}
+
+@enduml

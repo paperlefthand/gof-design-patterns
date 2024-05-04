@@ -1,0 +1,3 @@
+- 教師は受け持ちの生徒を知らない. 
+- 生徒は各々履修している科目の担当教師のリストを持っている
+- TODO StudentがObserverを指定して通知するには? mathが終わったらmathのみに通知. notifyObserversをTeacherでoverrideする.
