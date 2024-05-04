@@ -1,0 +1,34 @@
+@startuml CutPrint.Class
+
+abstract class Factory {
+    Product createProduct(String)
+    void registerProduct(Product)
+}
+abstract class Product {
+    void use()
+}
+
+Factory -> Product : create >
+
+interface Cuttable {
+}
+
+abstract class CutPrint {
+    void draw(Cuttable)
+    void cut(Cuttable)
+    void print(Cuttable)
+    Cuttable createCuttable()
+    void createCutPrint()
+}
+
+Wood ..|> Cuttable
+Potato ..|> Cuttable
+
+AliceCutPrint --|> CutPrint
+BobCutPrint --|> CutPrint
+
+CutPrint --> Cuttable : create >
+AliceCutPrint --> Potato : create > 
+BobCutPrint --> Wood : create >
+
+@enduml

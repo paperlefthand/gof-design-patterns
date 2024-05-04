@@ -15,6 +15,3 @@ public class Human {
     private float weight;
 
 }
-
-
-

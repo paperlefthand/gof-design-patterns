@@ -3,6 +3,7 @@ package pattern.observer.study;
 import java.util.Random;
 
 import lombok.Getter;
+import pattern.observer.Generator;
 
 public class Student extends pattern.observer.study.Generator {
 
@@ -17,6 +18,7 @@ public class Student extends pattern.observer.study.Generator {
     private int englishScore;
     @Getter
     private int phisicsScore;
+
     @Getter
     private String name;
 

@@ -1,0 +1,17 @@
+@startuml experiment.class
+
+Director o--> Builder
+SaltWaterBuilder --|> Builder
+SugarWaterBuilder --|> Builder
+Student -> Director : uses >
+
+class Director {
+    - Builder builder
+    + void construct()
+}
+
+class Builder {
+    + addSolute()
+}
+
+@enduml

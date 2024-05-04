@@ -1,0 +1,22 @@
+@startuml
+
+object student001
+object student002
+object student003
+object student004
+object mathTeacher
+object englishTeacher
+object phisicsTeacher
+
+mathTeacher *-- student001
+mathTeacher *-- student002
+mathTeacher *-- student003
+
+englishTeacher *-- student001
+englishTeacher *-- student002
+englishTeacher *-- student004
+
+phisicsTeacher *-- student003
+phisicsTeacher *-- student004
+
+@enduml
