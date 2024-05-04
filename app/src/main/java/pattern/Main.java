@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Choose number:");
         System.out.println("1. Observer Pattern");
         System.out.println("2. Factory Method Pattern");
-        System.out.println("3. c");
+        System.out.println("3. Strategy Pattern");
 
         try {
             int choice = scanner.nextInt();
@@ -24,6 +24,7 @@ public class Main {
                         pattern.factory_method.idcard.Main.main();
                         break;
                     case 3:
+                        pattern.strategy.human.Main.main();
                         break;
                 }
             } else {
