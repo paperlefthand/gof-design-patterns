@@ -3,7 +3,7 @@ package pattern.observer.study;
 import java.util.Random;
 
 import lombok.Getter;
-import pattern.observer.Generator;
+import pattern.observer.study.Generator;
 
 public class Student extends pattern.observer.study.Generator {
 
@@ -31,11 +31,11 @@ public class Student extends pattern.observer.study.Generator {
 
     public int getScore(Subject subject) {
         switch (subject) {
-            case Math:
+            case MATH:
                 return mathScore;
-            case English:
+            case ENGLISH:
                 return englishScore;
-            case Phisics:
+            case PHISICS:
                 return phisicsScore;
             default:
                 return 0;
